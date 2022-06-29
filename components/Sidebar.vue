@@ -1,12 +1,16 @@
 <template>
-  <div class="fixed h-full overflow-hidden">
-    <div class="flex flex-col space-y-3 bg-black text-white">
-      <div>
-        <h1 class="text-xl font-bold">DEVERHUB</h1>
+  <div class="fixed h-full bg-black text-white p-10 overflow-hidden w-[200px]">
+    <div class="flex h-full flex-col justify-between">
+      <div class="flex flex-col">
+        <div>
+          <h1 class="text-xl font-bold">DEVERHUB</h1>
+        </div>
+        <div>
+          <Nuxt-link to="/dashboard">Dashboard</Nuxt-link>
+          <Nuxt-link to="/dashboard">Categories</Nuxt-link>
+          <Nuxt-link to="/dashboard">Posts</Nuxt-link>
+        </div>
       </div>
-      <Nuxt-link to="/dashboard">Dashboard</Nuxt-link>
-      <Nuxt-link to="/dashboard">Categories</Nuxt-link>
-      <Nuxt-link to="/dashboard">Posts</Nuxt-link>
       <div>
         <div>
           <img src="" alt="" />

@@ -1,6 +1,8 @@
 <template>
-  <div>
+  <div class="flex">
     <Sidebar />
-    <Nuxt />
+    <div class="pl-[200px]">
+      <Nuxt />
+    </div>
   </div>
 </template>
