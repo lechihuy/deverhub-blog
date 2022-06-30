@@ -1,27 +1,52 @@
 <template>
-  <div class="bg-slate-100 rounded-xl w-[300px] mx-auto space-y-3 px-10 py-5">
-    <h1 class="text-center text-xl font-bold">Login</h1>
-
+  <div class="bg-white border rounded-xl h-[400px] px-8 pb-2 pt-8">
+    <h1 class="text-center text-xl font-bold mb-2">
+      Welcome to DEVERHUB - BLOG
+    </h1>
     <form @submit.prevent>
-      <div class="grid grid-cols-2">
-        <label for="email" class="col-span-1">Email</label>
+      <div class="flex flex-col mb-3">
+        <label for="email" class="">Email</label>
         <input
           name="email"
           type="text"
           v-model="email"
-          class="col-span-1 border rounded px-3"
+          class="border rounded px-3 py-2"
         />
       </div>
-      <div class="grid grid-cols-2">
-        <label for="password" class="col-span-1">Password</label>
+      <div class="flex flex-col mb-3">
+        <label for="password" class="">Password</label>
         <input
           name="password"
           type="password"
           v-model="password"
-          class="col-span-1 border rounded px-3"
+          class="border rounded px-3 py-2"
+        />
+      </div>
+      <div>
+        <input name="remember_me" type="checkbox" />
+        <label for="remember_me">Remember me</label>
+      </div>
+      <div class="mt-3">
+        <input
+          type="submit"
+          value="Login"
+          class="
+            bg-[#2563eb]
+            text-white
+            w-full
+            rounded
+            py-2
+            active:bg-[#1e40af]
+            hover:bg-[#1d4ed8]
+          "
         />
       </div>
     </form>
+    <Nuxt-link
+      to="/forgot-password"
+      class="text-[#1d4ed8] font-light text-center mt-6 block"
+      >I forgot my password</Nuxt-link
+    >
   </div>
 </template>
 
