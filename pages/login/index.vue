@@ -5,7 +5,7 @@
     </h1>
     <form @submit.prevent>
       <div class="flex flex-col mb-3">
-        <label for="email" class="">Email</label>
+        <label for="email" class="mb-1">Email</label>
         <input
           name="email"
           type="text"
@@ -14,7 +14,7 @@
         />
       </div>
       <div class="flex flex-col mb-3">
-        <label for="password" class="">Password</label>
+        <label for="password" class="mb-1">Password</label>
         <input
           name="password"
           type="password"
@@ -31,13 +31,13 @@
           type="submit"
           value="Login"
           class="
-            bg-[#2563eb]
+            bg-button
             text-white
             w-full
             rounded
             py-2
-            active:bg-[#1e40af]
-            hover:bg-[#1d4ed8]
+            active:bg-buttonActive
+            hover:bg-buttonHover
           "
         />
       </div>

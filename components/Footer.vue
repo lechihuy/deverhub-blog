@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed bottom-0 py-3 flex justify-center w-full">
+  <div class="bottom-0 flex justify-center items-center w-full h-[100px]">
     <p class="font-light text-[12px]">
       © Deverhub 2022 . All Rights Reserved. Privacy Policy
     </p>
