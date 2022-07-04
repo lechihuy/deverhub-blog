@@ -60,12 +60,12 @@
           <div class="border rounded flex items-center pr-3">
             <input
               name="confirmPassword"
-              :type="showPassword ? 'text' : 'password'"
+              :type="showConfirmPassword ? 'text' : 'password'"
               placeholder="Confirm Password"
               class="w-full px-3 py-2"
             />
-            <button @click="togglePassword">
-              <span v-if="showPassword" class="material-icons w-full">
+            <button @click="toggleConfirmPassword">
+              <span v-if="showConfirmPassword" class="material-icons w-full">
                 visibility
               </span>
               <span v-else class="material-icons w-full"> visibility_off </span>
@@ -110,14 +110,21 @@ export default {
       password: "",
     });
     const showPassword = ref(false);
+    const showConfirmPassword = ref(false);
     const togglePassword = () => {
       showPassword.value = !showPassword.value;
       console.log(showPassword.value);
     };
+    const toggleConfirmPassword = () => {
+      showConfirmPassword.value = !showConfirmPassword.value;
+      console.log(showConfirmPassword.value);
+    };
 
     return {
       showPassword,
+      showConfirmPassword,
       togglePassword,
+      toggleConfirmPassword,
       infor,
     };
   },

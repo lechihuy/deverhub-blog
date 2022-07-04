@@ -16,12 +16,20 @@
       </div>
       <div class="flex flex-col mb-3">
         <label for="password" class="mb-1">Password</label>
-        <input
-          name="password"
-          type="password"
-          v-model="password"
-          class="border rounded px-3 py-2"
-        />
+        <div class="border rounded flex items-center pr-3">
+          <input
+            name="password"
+            :type="showPassword ? 'text' : 'password'"
+            v-model="password"
+            class="w-full px-3 py-2"
+          />
+          <button @click="togglePassword">
+            <span v-if="showPassword" class="material-icons w-full">
+              visibility
+            </span>
+            <span v-else class="material-icons w-full"> visibility_off </span>
+          </button>
+        </div>
       </div>
       <div>
         <input name="remember_me" type="checkbox" />
@@ -64,7 +72,13 @@ export default {
   setup() {
     const email = ref("");
     const password = ref("");
-    return { email, password };
+    const showPassword = ref(false);
+    const togglePassword = () => {
+      showPassword.value = !showPassword.value;
+      console.log(showPassword.value);
+    };
+
+    return { email, password, showPassword, togglePassword };
   },
 };
 </script>
