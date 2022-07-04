@@ -1,6 +1,6 @@
 <template>
-  <div class="px-8 py-8">
-    <div class="bg-white border rounded-xl px-8 pb-2 pt-8">
+  <div class="">
+    <div class="bg-white border rounded-xl p-8">
       <div class="mb-5">
         <h1 class="text-center text-xl font-black text-[40px] mb-5">
           REGISTER
@@ -10,6 +10,7 @@
         </p>
       </div>
       <form @submit.prevent>
+        <!-- USERNAME INPUT -->
         <div class="flex flex-col mb-3">
           <label for="username" class="mb-1">Username</label>
           <div>
@@ -22,6 +23,7 @@
             />
           </div>
         </div>
+        <!-- EMAIL INPUT -->
         <div class="flex flex-col mb-3">
           <label for="email" class="mb-1">Email</label>
           <div>
@@ -52,6 +54,7 @@
             </button>
           </div>
         </div>
+        <!-- CONFIRM PASSWORD -->
         <div class="flex flex-col mb-3">
           <label for="confirmPassword" class="mb-1">Confirm Password</label>
           <div class="border rounded flex items-center pr-3">
@@ -68,6 +71,13 @@
               <span v-else class="material-icons w-full"> visibility_off </span>
             </button>
           </div>
+        </div>
+        <!-- CHECKBOX -->
+        <div>
+          <input type="checkbox" id="gettingNewsCheckbox" />
+          <label for="gettingNewsCheckbox"
+            >Get the latest news from Deverhub Blog</label
+          >
         </div>
         <div class="my-10">
           <input

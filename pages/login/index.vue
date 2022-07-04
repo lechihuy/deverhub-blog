@@ -1,8 +1,9 @@
 <template>
-  <div class="bg-white border rounded-xl h-[400px] px-8 pb-2 pt-8">
-    <h1 class="text-center text-xl font-bold mb-2">
-      Welcome to DEVERHUB - BLOG
-    </h1>
+  <div class="bg-white border rounded-xl px-8 pb-2 pt-8">
+    <div class="mb-5">
+      <h1 class="text-center text-xl font-black text-[40px] mb-5">Login</h1>
+      <p class="text-center text-subText">Input your email to login account.</p>
+    </div>
     <form @submit.prevent>
       <div class="flex flex-col mb-3">
         <label for="email" class="mb-1">Email</label>
@@ -26,7 +27,7 @@
         <input name="remember_me" type="checkbox" />
         <label for="remember_me">Remember me</label>
       </div>
-      <div class="mt-3">
+      <div class="mt-5">
         <input
           type="submit"
           value="Login"
@@ -44,8 +45,14 @@
     </form>
     <Nuxt-link
       to="/forgot-password"
-      class="text-[#1d4ed8] font-light text-center mt-6 block"
+      class="text-[#1d4ed8] font-light text-center my-6 block"
       >I forgot my password</Nuxt-link
+    >
+    <span class="text-center my-6 block"
+      >Don't have an account?
+      <Nuxt-link to="/register" class="text-[#1d4ed8] font-light"
+        >Register</Nuxt-link
+      ></span
     >
   </div>
 </template>
