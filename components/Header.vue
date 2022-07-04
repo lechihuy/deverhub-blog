@@ -12,11 +12,14 @@
       <h1>DEVERHUB <span>BLOG</span></h1>
     </div>
     <!-- NAVIGATOR -->
-    <div class="flex justify-between items-center text-[20px] font-bold">
+    <div class="flex justify-between items-center text-[18px] font-bold">
       <Nuxt-link to="/home">Home</Nuxt-link>
       <Nuxt-link to="/contact">Technology</Nuxt-link>
       <Nuxt-link to="/programming">Programming</Nuxt-link>
       <Nuxt-link to="/tricks">Tricks</Nuxt-link>
+    </div>
+    <div>
+      <SearchingBar />
     </div>
   </div>
 </template>

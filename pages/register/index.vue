@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <div class="bg-white border rounded-xl p-8">
       <div class="mb-5">
         <h1 class="text-center text-xl font-black text-[40px] mb-5">
@@ -15,7 +15,7 @@
           <label for="username" class="mb-1">Username</label>
           <div>
             <input
-              name="username"
+              id="username"
               type="text"
               v-model="infor.username"
               class="border rounded px-3 py-2 w-full"
@@ -28,7 +28,7 @@
           <label for="email" class="mb-1">Email</label>
           <div>
             <input
-              name="email"
+              id="email"
               type="text"
               v-model="infor.email"
               class="border rounded px-3 py-2 w-full"
@@ -41,7 +41,7 @@
           <label for="password" class="mb-1">Password</label>
           <div class="border rounded flex items-center pr-3">
             <input
-              name="password"
+              id="password"
               :type="showPassword ? 'text' : 'password'"
               placeholder="Password"
               class="w-full px-3 py-2"
@@ -59,7 +59,7 @@
           <label for="confirmPassword" class="mb-1">Confirm Password</label>
           <div class="border rounded flex items-center pr-3">
             <input
-              name="confirmPassword"
+              id="confirmPassword"
               :type="showConfirmPassword ? 'text' : 'password'"
               placeholder="Confirm Password"
               class="w-full px-3 py-2"
@@ -73,9 +73,9 @@
           </div>
         </div>
         <!-- CHECKBOX -->
-        <div>
+        <div class="flex items-center">
           <input type="checkbox" id="gettingNewsCheckbox" />
-          <label for="gettingNewsCheckbox"
+          <label for="gettingNewsCheckbox" class="ml-3"
             >Get the latest news from Deverhub Blog</label
           >
         </div>

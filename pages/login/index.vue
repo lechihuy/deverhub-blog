@@ -8,9 +8,10 @@
       <div class="flex flex-col mb-3">
         <label for="email" class="mb-1">Email</label>
         <input
-          name="email"
+          id="email"
           type="text"
           v-model="email"
+          placeholder="Email"
           class="border rounded px-3 py-2"
         />
       </div>
@@ -18,9 +19,10 @@
         <label for="password" class="mb-1">Password</label>
         <div class="border rounded flex items-center pr-3">
           <input
-            name="password"
+            id="password"
             :type="showPassword ? 'text' : 'password'"
             v-model="password"
+            placeholder="Password"
             class="w-full px-3 py-2"
           />
           <button @click="togglePassword">
@@ -31,9 +33,9 @@
           </button>
         </div>
       </div>
-      <div>
-        <input name="remember_me" type="checkbox" />
-        <label for="remember_me">Remember me</label>
+      <div class="flex items-center">
+        <input id="remember_me" type="checkbox" />
+        <label for="remember_me" class="ml-3">Remember me</label>
       </div>
       <div class="mt-5">
         <input
