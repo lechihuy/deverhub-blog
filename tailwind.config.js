@@ -8,6 +8,11 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
+    screens: {
+      'sm': '600px',
+      'md': '768px',
+      'lg': '1024px',
+    },
     extend: {
       colors: {
         'button': '#2563eb',
