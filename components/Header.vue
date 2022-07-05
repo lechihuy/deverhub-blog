@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-[626px] mx-auto">
     <div>
-      <a href="/home" class="flex items-center justify-center">
+      <a href="/" class="flex items-center justify-center">
         <div class="w-[43px] h-[43px]">
           <img
             src="~/assets/img/logo-none-bg.png"
@@ -16,12 +16,7 @@
     <div class="flex justify-between items-center my-5 text-[16px] font-bold">
       <!-- NAVI LEFT PC-->
       <div class="space-x-4 hidden md:block text-subText">
-        <Nuxt-link to="/home" class="hover:text-black">Home</Nuxt-link>
-        <Nuxt-link to="/contact" class="hover:text-black">Technology</Nuxt-link>
-        <Nuxt-link to="/programming" class="hover:text-black"
-          >Programming</Nuxt-link
-        >
-        <Nuxt-link to="/tricks" class="hover:text-black">Tricks</Nuxt-link>
+        <NavbarLinks />
       </div>
       <!-- NAVI LEFT MOBILE -->
       <!-- NAVI LEFT MOBILE MENU BUTTON -->
@@ -36,7 +31,7 @@
         <div class="flex items-center" v-if="isLoggedIn">
           <!-- NOTIFICATION -->
           <div class="relative">
-            <button @click="toggleNotificate">
+            <button @click="toggleNotificate" class="pr-3">
               <span class="material-icons"> notifications </span>
             </button>
             <!-- <div :class="showNotificate ? 'block' : 'hidden'"> -->
@@ -45,16 +40,16 @@
           </div>
           <!-- AVATAR -->
           <div class="relative">
-            <div class="py-3 px-4 flex items-center">
-              <div class="w-[32px] mr-3" @click="toggleUserMenu">
+            <div class="py-3 pl-4 flex items-center">
+              <button class="w-[32px]" @click="toggleUserMenu">
                 <img
                   src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
                   alt=""
                   class="w-full h-full object-cover rounded-full"
                 />
-              </div>
+              </button>
             </div>
-            <UserMenu :showUserMenu="showUserMenu" />
+            <!-- <UserMenu :showUserMenu="showUserMenu" /> -->
           </div>
         </div>
         <!-- NOT AUTHENTICATE -->
@@ -96,14 +91,8 @@
     </div>
     <!-- MOBILE MENU NAVBAR -->
     <div>
-      <div
-        class="flex flex-col space-y-3 justify-between text-subText"
-        :class="showNavbar ? 'block' : 'hidden'"
-      >
-        <Nuxt-link to="/home" class="px-1">Home</Nuxt-link>
-        <Nuxt-link to="/contact" class="px-1">Technology</Nuxt-link>
-        <Nuxt-link to="/programming" class="px-1">Programming</Nuxt-link>
-        <Nuxt-link to="/tricks" class="px-1">Tricks</Nuxt-link>
+      <div class="text-subText" :class="showNavbar ? 'block' : 'hidden'">
+        <NavbarLinks />
       </div>
     </div>
     <!-- SEARCHING BAR -->
@@ -119,7 +108,7 @@ import { ref, useRoute, watch } from "@nuxtjs/composition-api";
 
 export default {
   setup() {
-    const isLoggedIn = true;
+    const isLoggedIn = false;
     const showNavbar = ref(false);
     const showNotificate = ref(false);
     const showUserMenu = ref(true);

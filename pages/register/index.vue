@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-white border rounded-xl p-8">
+    <div class="bg-white border rounded-xl p-2 sm:p-5 md:p-6 lg:p-8">
       <div class="mb-5">
         <h1 class="text-center text-xl font-black text-[40px] mb-5">
           REGISTER
@@ -114,6 +114,12 @@
           />
         </div>
       </form>
+      <span class="text-center my-6 block"
+        >Have an account?
+        <Nuxt-link to="/login" class="text-[#1d4ed8] font-light"
+          >Login</Nuxt-link
+        ></span
+      >
     </div>
   </div>
 </template>

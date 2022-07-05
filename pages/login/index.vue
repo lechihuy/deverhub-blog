@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-white border rounded-xl px-8 pb-2 pt-8">
+  <div
+    class="bg-white border rounded-xl px-2 sm:px-5 md:px-6 lg:px-8 pb-2 pt-8"
+  >
     <div class="mb-5">
       <h1 class="text-center text-xl font-black text-[40px] mb-5">Login</h1>
       <p class="text-center text-subText">Input your email to login account.</p>

@@ -1,14 +1,14 @@
 <template>
   <div
     class="
-      absolute
+      fixed
       inset-x-0
       bottom-0
       flex
       justify-center
       items-center
       w-full
-      h-[100px]
+      h-[50px]
     "
   >
     <p class="font-light text-[12px]">
