@@ -12,8 +12,9 @@
   >
     <Header />
     <div class="pt-5">
-      <Nuxt />
+      <SortArticle />
     </div>
+    <Nuxt />
     <Footer />
   </div>
 </template>

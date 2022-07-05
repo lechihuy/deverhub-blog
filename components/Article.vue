@@ -1,5 +1,5 @@
 <template>
-  <section class="rounded-lg mt-10">
+  <section class="rounded-lg mt-5">
     <!-- ARTICLE IMG -->
     <div class="h-[283px]">
       <Nuxt-link to="#">
