@@ -1,4 +1,11 @@
-<template></template>
+<template>
+  <div>
+    <Article />
+    <Article />
+    <Article />
+    <Article />
+  </div>
+</template>
 
 <script>
 export default {

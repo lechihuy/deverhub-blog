@@ -10,6 +10,9 @@
       space-y-0
       lg:items-center
       md:items-center
+      lg:space-x-5
+      md:space-x-5
+      space-x-0
     "
   >
     <Nuxt-link to="/" class="px-1">Home</Nuxt-link>

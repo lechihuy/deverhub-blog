@@ -15,7 +15,7 @@
     <!-- NAVIGATOR -->
     <div class="flex justify-between items-center my-5 text-[16px] font-bold">
       <!-- NAVI LEFT PC-->
-      <div class="space-x-4 hidden md:block text-subText">
+      <div class="hidden md:block text-subText">
         <NavbarLinks />
       </div>
       <!-- NAVI LEFT MOBILE -->
