@@ -49,7 +49,7 @@
                 />
               </button>
             </div>
-            <!-- <UserMenu :showUserMenu="showUserMenu" /> -->
+            <UserMenu :showUserMenu="showUserMenu" />
           </div>
         </div>
         <!-- NOT AUTHENTICATE -->
@@ -108,10 +108,10 @@ import { ref, useRoute, watch } from "@nuxtjs/composition-api";
 
 export default {
   setup() {
-    const isLoggedIn = false;
+    const isLoggedIn = true;
     const showNavbar = ref(false);
     const showNotificate = ref(false);
-    const showUserMenu = ref(true);
+    const showUserMenu = ref(false);
     const route = useRoute();
 
     watch(route, () => {
@@ -130,7 +130,7 @@ export default {
       showNotificate.value = !showNotificate.value;
     };
     const toggleUserMenu = () => {
-      showNotificate.value = !showNotificate.value;
+      showUserMenu.value = !showUserMenu.value;
     };
     return {
       showNavbar,
