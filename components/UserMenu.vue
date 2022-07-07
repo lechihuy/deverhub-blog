@@ -1,16 +1,32 @@
 <template>
   <div
-    class="w-[300px] top-10 border rounded-lg absolute z-10 bg-slate-500"
+    class="
+      w-[200px]
+      top-15
+      right-0
+      border
+      rounded-lg
+      absolute
+      z-10
+      bg-white
+      shadow-xl
+    "
     :class="showUserMenu ? 'block' : 'hidden'"
   >
-    <div class="flex flex-col items-center py-3 px-5">
-      <div>
+    <div class="flex flex-col py-3 px-2">
+      <div class="border-b p-2">
         <p>Son Bill</p>
       </div>
-      <div class="flex flex-col">
-        <Nuxt-link to="/profile">Profile</Nuxt-link>
-        <Nuxt-link to="/logout">Logout</Nuxt-link>
-      </div>
+      <Nuxt-link
+        to="/profile"
+        class="hover:bg-[#f0f9ff] hover:text-[#60a5fa] mt-2 p-2 rounded-md"
+        >Profile</Nuxt-link
+      >
+      <Nuxt-link
+        to="/logout"
+        class="hover:bg-[#f0f9ff] hover:text-[#60a5fa] p-2 rounded-md"
+        >Logout</Nuxt-link
+      >
     </div>
   </div>
 </template>

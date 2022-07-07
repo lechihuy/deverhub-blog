@@ -44,6 +44,7 @@
               id="password"
               :type="showPassword ? 'text' : 'password'"
               placeholder="Password"
+              v-model="infor.password"
               class="w-full px-3 py-2"
             />
             <button @click="togglePassword">

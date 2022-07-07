@@ -31,7 +31,7 @@
         <div class="flex items-center" v-if="isLoggedIn">
           <!-- NOTIFICATION -->
           <div class="relative">
-            <button @click="toggleNotificate" class="pr-3">
+            <button @click="toggleNotificate" class="pr-3 flex items-center">
               <span class="material-icons"> notifications </span>
             </button>
             <!-- <div :class="showNotificate ? 'block' : 'hidden'"> -->

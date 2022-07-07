@@ -12,7 +12,7 @@
         <input
           id="email"
           type="text"
-          v-model="email"
+          v-model="loginData.email"
           placeholder="Email"
           class="border rounded px-3 py-2"
         />
@@ -23,7 +23,7 @@
           <input
             id="password"
             :type="showPassword ? 'text' : 'password'"
-            v-model="password"
+            v-model="loginData.password"
             placeholder="Password"
             class="w-full px-3 py-2"
           />
@@ -92,19 +92,21 @@
 </template>
 
 <script>
-import { ref } from "@nuxtjs/composition-api";
+import { reactive, ref } from "@nuxtjs/composition-api";
 export default {
   layout: "loginAndRegister",
   setup() {
-    const email = ref("");
-    const password = ref("");
+    const loginData = reactive({
+      email: "",
+      password: "",
+    });
     const showPassword = ref(false);
     const togglePassword = () => {
       showPassword.value = !showPassword.value;
       console.log(showPassword.value);
     };
 
-    return { email, password, showPassword, togglePassword };
+    return { loginData, showPassword, togglePassword };
   },
 };
 </script>
