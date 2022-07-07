@@ -1,6 +1,16 @@
 <template>
   <div
-    class="w-[300px] top-10 border rounded-lg absolute z-10 bg-white"
+    class="
+      w-[300px]
+      top-10
+      right-[-10px]
+      border
+      rounded-lg
+      absolute
+      z-10
+      bg-white
+      shadow-xl
+    "
     :class="showNotificate ? 'block' : 'hidden'"
   >
     <!-- NOTI - 1 -->

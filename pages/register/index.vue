@@ -146,12 +146,26 @@ export default {
       console.log(showConfirmPassword.value);
     };
 
+    // const submit = async () => {
+    //   await fetch("http://localhost:8000/api/register", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify({
+    //       username: username,
+    //       email: email,
+    //       password: password,
+    //     }),
+    //   });
+    //   await $router.push("/login");
+    // };
+
     return {
       showPassword,
       showConfirmPassword,
       togglePassword,
       toggleConfirmPassword,
       infor,
+      // submit,
     };
   },
 };

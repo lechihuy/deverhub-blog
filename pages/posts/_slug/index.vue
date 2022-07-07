@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h1>Hello</h1>
+    <DetailPostFunctions />
   </div>
 </template>
 
 <script>
 export default {
-  layout: "default",
+  layout: "detailPost",
 };
 </script>
