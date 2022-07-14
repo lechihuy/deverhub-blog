@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-[626px] mx-auto">
+  <div class="max-w-[626px] mx-auto" v-click-outside="onClickOutsideMobileMenu">
     <div>
       <a href="/" class="flex items-center justify-center">
         <div class="w-[43px] h-[43px]">
@@ -13,7 +13,10 @@
       </a>
     </div>
     <!-- NAVIGATOR -->
-    <div class="flex justify-between items-center my-5 text-[16px] font-bold">
+    <div
+      class="flex justify-between items-center my-5 text-[16px] font-bold"
+      v-click-outside="onClickOutsideNavRight"
+    >
       <!-- NAVI LEFT PC-->
       <div class="hidden md:block text-subText">
         <NavbarLinks />
@@ -21,7 +24,7 @@
       <!-- NAVI LEFT MOBILE -->
       <!-- NAVI LEFT MOBILE MENU BUTTON -->
       <div class="md:hidden block">
-        <button @click="toggleShowNavbar">
+        <button @click="toggleShowNavbar" class="flex items-center">
           <span class="material-icons"> menu </span>
         </button>
       </div>
@@ -105,8 +108,11 @@
 
 <script>
 import { ref, useRoute, watch } from "@nuxtjs/composition-api";
-
+import vClickOutside from "v-click-outside";
 export default {
+  directives: {
+    clickOutside: vClickOutside.directive,
+  },
   setup() {
     const isLoggedIn = true;
     const showNavbar = ref(false);
@@ -121,7 +127,15 @@ export default {
         showNavbar.value = false;
       }
     });
-
+    const onClickOutsideNavRight = () => {
+      if (showNotificate && showUserMenu) {
+        showNotificate.value = false;
+        showUserMenu.value = false;
+      }
+    };
+    const onClickOutsideMobileMenu = () => {
+      showNavbar.value = false;
+    };
     const toggleShowNavbar = () => {
       showNavbar.value = !showNavbar.value;
     };
@@ -140,6 +154,8 @@ export default {
       showNotificate,
       toggleUserMenu,
       showUserMenu,
+      onClickOutsideNavRight,
+      onClickOutsideMobileMenu,
     };
   },
 };
