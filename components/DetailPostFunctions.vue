@@ -74,6 +74,7 @@ export default defineComponent({
 
     const copyToClipBoard = () => {
       navigator.clipboard.writeText(routeName.value);
+      showMoreOptions.value = !showMoreOptions.value;
     };
 
     return {
