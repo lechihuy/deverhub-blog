@@ -1,12 +1,13 @@
 <template>
   <div
     class="
-      inset-x-0
+      absolute
       bottom-0
-      flex
+      left-0
       justify-center
       text-center
       items-center
+      flex
       w-full
       h-[50px]
     "

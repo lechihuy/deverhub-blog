@@ -1,3 +1,10 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
-  font-family: 'nunito'
+  font-family: 'nunito';
+  min-height: 100%;
+  margin: 0 0 50px;
 }

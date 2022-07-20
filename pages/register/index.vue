@@ -1,8 +1,11 @@
 <template>
   <div>
-    <div class="bg-white border rounded-xl p-2 sm:p-5 md:p-6 lg:p-8">
-      <div class="mb-5">
-        <h1 class="text-center text-xl font-black text-[40px] mb-5">
+    <div class="bg-white border rounded-xl p-4 sm:p-5 md:p-6 lg:p-8">
+      <!-- REGISTER TITLE -->
+      <div class="mb-5 py-3 md:py-0">
+        <h1
+          class="text-center text-xl font-black text-[30px] md:text-[40px] mb-5"
+        >
           REGISTER
         </h1>
         <p class="text-center text-subText">
