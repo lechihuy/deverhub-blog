@@ -13,19 +13,27 @@
     <!-- ARTICLE CONTENT -->
     <div class="border rounded-b-lg p-5 h-full">
       <!-- CONTENT TAG -->
-      <div class="underline text-subText font-extralight">
+      <div
+        class="
+          underline
+          text-[13px]
+          md:text-[16px]
+          text-subText
+          font-extralight
+        "
+      >
         <Nuxt-link to="#">REACTJS</Nuxt-link>
       </div>
       <!-- CONTENT TITLE -->
       <div>
         <Nuxt-link to="#">
-          <h1 class="font-medium text-[28px] mb-[10px]">
+          <h1 class="font-medium text-[20px] md:text-[28px] mb-[10px]">
             Xây dựng website bằng ReactJS
           </h1>
         </Nuxt-link>
       </div>
       <!-- RELATED TAGS -->
-      <div class="flex space-x-5 mb-[25px]">
+      <div class="flex text-[13px] md:text-[16px] space-x-5 mb-[25px]">
         <Nuxt-link to="#" class="hover:underline">
           <span>#</span>webdev</Nuxt-link
         >
@@ -37,7 +45,17 @@
         >
       </div>
       <!-- DETAIL CONTENT USER -->
-      <div class="flex justify-between text-subText font-extralight">
+      <div
+        class="
+          flex
+          justify-between
+          text-subText
+          font-extralight
+          text-[12px]
+          sm:text-[14px]
+          md:text-[16px]
+        "
+      >
         <div class="flex space-x-5">
           <Nuxt-link to="#" class="hover:underline">Son Bill</Nuxt-link>
           <p>•</p>

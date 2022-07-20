@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-[626px] mx-auto" v-click-outside="onClickOutsideMobileMenu">
+  <div class="max-w-[626px] mx-auto">
     <div>
       <a href="/" class="flex items-center justify-center">
         <div class="w-[43px] h-[43px]">
@@ -23,7 +23,7 @@
       </div>
       <!-- NAVI LEFT MOBILE -->
       <!-- NAVI LEFT MOBILE MENU BUTTON -->
-      <div class="md:hidden block">
+      <div class="md:hidden block" v-click-outside="onClickOutsideMobileMenu">
         <button @click="toggleShowNavbar" class="flex items-center">
           <span class="material-icons"> menu </span>
         </button>
