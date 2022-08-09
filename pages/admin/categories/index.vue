@@ -5,30 +5,26 @@
     </div>
     <div>
       <button class="bg-black hover:bg-gray-900 px-3 py-2 text-white mb-5">
-        CREATE POST
+        CREATE CATEGORY
       </button>
     </div>
     <table class="table-auto w-full p-5">
       <thead>
         <tr class="w-full border-b-[1px]">
           <th>ID</th>
-          <th>TITLE</th>
           <th>CATEGORY</th>
-          <th>USERNAME</th>
-          <th>DATE</th>
           <th></th>
         </tr>
       </thead>
       <tbody>
         <tr class="text-center">
           <td class="p-5">1</td>
-          <td class="p-5">Learn ReactJS</td>
           <td class="p-5">Web Developer</td>
-          <td class="p-5">Son Bill</td>
-          <td class="p-5">09-08-2022 - 20:58:14</td>
           <td>
             <div class="flex items-center space-x-3">
-              <button>DETAIL</button>
+              <button class="flex items-center justify-center">
+                <span class="material-icons"> mode_edit </span>
+              </button>
               <button class="flex items-center justify-center">
                 <span class="material-icons"> clear </span>
               </button>
@@ -41,8 +37,24 @@
 </template>
 
 <script>
+export default {};
+</script>
+
+    </div>
+  </div>
+</template>
+
+<script>
+import { reactive } from "@nuxtjs/composition-api";
 export default {
   layout: "admin",
+  setup() {
+    const table = reactive(["ID", "CATEGORY"]);
+    const data = reactive(["1", "Webdev"]);
+    console.log(table);
+    console.log(data);
+    return { table, data };
+  },
 };
 </script>
 
