@@ -5,10 +5,11 @@
         <div>
           <h1 class="text-xl font-bold">DEVERHUB</h1>
         </div>
-        <div>
-          <Nuxt-link to="/dashboard">Dashboard</Nuxt-link>
-          <Nuxt-link to="/dashboard">Categories</Nuxt-link>
-          <Nuxt-link to="/dashboard">Posts</Nuxt-link>
+        <div class="flex flex-col space-y-3 mt-5">
+          <Nuxt-link to="/admin/dashboard">Dashboard</Nuxt-link>
+          <Nuxt-link to="/admin/categories">Categories</Nuxt-link>
+          <Nuxt-link to="/admin/posts">Posts</Nuxt-link>
+          <Nuxt-link to="/admin/users">Users</Nuxt-link>
         </div>
       </div>
       <div>
